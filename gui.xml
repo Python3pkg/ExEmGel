@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<guidata>
+    <skin>
+        <scoreFontName>Tahoma Bold</scoreFontName>
+        <scoreFontHeight>20</scoreFontHeight>
+        <blockSize>16</blockSize>
+        <nextBlockX>
+            <lines>205</lines>
+            <lines>205</lines>
+            <lines>205</lines>
+            <lines>205</lines>
+        </nextBlockX>
+        <backgroundFile>"back.bmp"</backgroundFile>
+    </skin>
+</guidata>
