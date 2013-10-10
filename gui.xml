@@ -5,10 +5,10 @@
         <scoreFontHeight>20</scoreFontHeight>
         <blockSize>16</blockSize>
         <nextBlockX>
-            <lines>205</lines>
-            <lines>205</lines>
-            <lines>205</lines>
-            <lines>205</lines>
+            <line>205</line>
+            <line>206</line>
+            <line>207</line>
+            <line>105</line>
         </nextBlockX>
         <backgroundFile>"back.bmp"</backgroundFile>
     </skin>
