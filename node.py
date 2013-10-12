@@ -10,13 +10,15 @@ class Node(object):
             return new_element.text
         else:
             return Node(new_element)
-    
+
+    def __str__(self):
+        return self._element.text
+
+    text = property(__str__)
 
     def __getattr__(self, attr):
         if attr in self.__dict__:
             return self.__dict__[attr]
-        if attr == "text":
-            return self._element.text
         l = list(self._element.iter(attr))
         if len(l) == 1:
             return self._make_new_node_or_leaf(l[0])
@@ -24,7 +26,6 @@ class Node(object):
             return tuple([self._make_new_node_or_leaf(e) for e in l])
         if attr in self._element.keys():
             return self._element.get(attr)
-                
         
         raise AttributeError("%r object has no attribute %r" %
                                          (self.__class__, attr))
