@@ -5,7 +5,8 @@ class Node(object):
         self._element = element
 
     def _make_new_node_or_leaf(self, new_element):
-        if(len(list(new_element.iter())) == 1):
+        if len(list(new_element.iter())) == 1 \
+                and len(new_element.keys()) == 0:
             return new_element.text
         else:
             return Node(new_element)
@@ -13,14 +14,16 @@ class Node(object):
 
     def __getattr__(self, attr):
         if attr in self.__dict__:
-            print "we has " , attr
             return self.__dict__[attr]
+        if attr == "text":
+            return self._element.text
         l = list(self._element.iter(attr))
-        print "len(l) = %d" % len(l) 
         if len(l) == 1:
             return self._make_new_node_or_leaf(l[0])
         elif len(l) > 1:
             return tuple([self._make_new_node_or_leaf(e) for e in l])
+        if attr in self._element.keys():
+            return self._element.get(attr)
                 
         
         raise AttributeError("%r object has no attribute %r" %
