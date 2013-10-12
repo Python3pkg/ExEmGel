@@ -15,8 +15,15 @@ class NodeTestCases(unittest.TestCase):
     def test_repeated_elements(self):
         n = node.Node(make_simple_xml_element())
         self.assertEquals(type(n.guidata.skin.nextBlockX.line),  tuple)
-        self.assertEquals(n.guidata.skin.nextBlockX.line[1], "206" )
+        self.assertEquals(n.guidata.skin.nextBlockX.line[3], "No A Number" )
 
+    def test_convert_to_int(self):
+        n = node.Node(make_simple_xml_element())
+        self.assertEquals(n.guidata.skin.nextBlockX.line[1], 206 )
+
+    def test_does_not_convert_floats_or_decimals(self):
+        n = node.Node(make_simple_xml_element())
+        self.assertEquals(n.guidata.skin.nextBlockX.line[2], "207.5")
 
     def test_tuple_of_nodes(self):
         n = node.Node(make_menu_element())
@@ -53,8 +60,8 @@ def make_simple_xml_element():
         <nextBlockX>
             <line>205</line>
             <line>206</line>
-            <line>207</line>
-            <line>105</line>
+            <line>207.5</line>
+            <line>No A Number</line>
         </nextBlockX>
         <backgroundFile>"back.bmp"</backgroundFile>
     </skin>

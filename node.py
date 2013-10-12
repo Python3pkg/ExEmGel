@@ -7,7 +7,10 @@ class Node(object):
     def _make_new_node_or_leaf(self, new_element):
         if len(list(new_element.iter())) == 1 \
                 and len(new_element.keys()) == 0:
-            return new_element.text
+            text = new_element.text
+            if text.isdigit():
+                return int(text)
+            return text
         else:
             return Node(new_element)
 
