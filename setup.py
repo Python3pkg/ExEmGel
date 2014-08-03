@@ -7,7 +7,7 @@ with open('README.rst') as file:
 
 setup(
     name='ExEmGel',
-    version='0.1',
+    version='0.2',
     author = "Dave Collins",
     author_email = "dave@hopest.net",
     packages=['exemgel',],
@@ -17,8 +17,8 @@ setup(
     long_description=long_description,
     classifiers=[
         'Intended Audience :: Developers',
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.4',
     "License :: OSI Approved",
     "License :: OSI Approved :: MIT License",
 
