@@ -3,3 +3,4 @@
 ExEmGel.egg-info/
 dist/
 build
+.tox

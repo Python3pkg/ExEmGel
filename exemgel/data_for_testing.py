@@ -1,8 +1,8 @@
 
-import StringIO
+from io import StringIO
 
 def simple_xml_file_obj():
-    return  StringIO.StringIO("""\
+    return  StringIO(u"""\
 <?xml version="1.0"?>
 <guidata>
     <skin>

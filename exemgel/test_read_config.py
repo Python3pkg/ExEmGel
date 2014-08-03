@@ -1,8 +1,10 @@
 import unittest
-import StringIO
-import read_config
-import doc
-import data_for_testing
+import sys
+from io import StringIO
+
+from . import read_config
+from . import doc
+from . import data_for_testing
 
 """
 ./read_config.py  gui.xml guidata.skin.scoreFontName

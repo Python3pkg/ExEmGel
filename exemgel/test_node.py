@@ -1,6 +1,6 @@
 import unittest
 import xml.etree.ElementTree as ET
-import node
+from . import node
 
 class NodeTestCases(unittest.TestCase):
     def test_simple_text_value(self):

@@ -1,6 +1,6 @@
-import doc
+from . import doc
 import unittest
-import data_for_testing
+from . import data_for_testing
 
 class DocTestCases(unittest.TestCase):
     def testsimple(self):

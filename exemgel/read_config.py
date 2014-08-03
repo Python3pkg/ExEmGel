@@ -1,11 +1,11 @@
 #!/usr/bin/env python
-import doc
+from . import doc
 
 
 def main(argv):
     d = doc.Doc(argv[1])
     for a in argv[2:]:
-        print make_line(d, a)
+        print(make_line(d, a))
 
 def make_enviroment_name(name):
     return name.upper().replace(".","_")

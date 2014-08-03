@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 
-import node
+from . import node
 
 
 class Doc(node.Node):
