@@ -6,6 +6,7 @@ It allow clean and simple access to xml.
 
 
 .. code-block:: pycon
+
    >>> config = exemgel.parse("configuration.xml")
    >>> config.configuration.email.host
    'mail.example.com'
