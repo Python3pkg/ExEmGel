@@ -6,7 +6,7 @@ class Node(object):
 
     def _make_new_node_or_leaf(self, new_element):
         if len(list(new_element.iter())) == 1 \
-                and len(new_element.keys()) == 0:
+                and len(list(new_element.keys())) == 0:
             text = new_element.text
             if text.isdigit():
                 return int(text)
@@ -27,7 +27,7 @@ class Node(object):
             return self._make_new_node_or_leaf(l[0])
         elif len(l) > 1:
             return tuple([self._make_new_node_or_leaf(e) for e in l])
-        if attr in self._element.keys():
+        if attr in list(self._element.keys()):
             return self._element.get(attr)
         
         raise AttributeError("%r object has no attribute %r" %

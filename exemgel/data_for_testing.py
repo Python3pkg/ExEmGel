@@ -2,7 +2,7 @@
 from io import StringIO
 
 def simple_xml_file_obj():
-    return  StringIO(u"""\
+    return  StringIO("""\
 <?xml version="1.0"?>
 <guidata>
     <skin>
